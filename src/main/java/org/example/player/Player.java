@@ -1,5 +1,5 @@
 package org.example.player;
-
+import java.lang.*;
 public class Player {
     private final String name;
     private int health;
