@@ -15,11 +15,7 @@ public class Arena {
         this.dice = new Dice();
     }
 
-    public void swapRole(Player attacker, Player defender){
-        Player temp = attacker;
-        attacker = defender;
-        defender = temp;
-    }
+    // Method to handle an attack between two players
     private void attack(Player attacker,Player defender){
         int attackerDiceValue = dice.roll();
         int defenderDiceValue = dice.roll();
@@ -29,24 +25,30 @@ public class Arena {
 
         int damage = Math.max(attackDamage - defenseStrength, 0);
 
+        // Reduce defender's health based on damage taken
         defender.reduceHealth(damage);
 
+        // Print attack and defense details
         System.out.println(attacker.getName() + " attacks with roll " + attackerDiceValue + " for damage " + attackDamage);
         System.out.println(defender.getName() + " defends with roll " + defenderDiceValue + " for strength " + defenseStrength);
         System.out.println(defender.getName() + " takes " + damage + " damage and is now at " + defender.getHealth() + " health");
     }
 
-    public void start(){
+    // Method to start the fight between two players
+    public void startFight(){
         System.out.println("The battle begins between "+ player1.getName() + " and " + player2.getName());
-        Player attacker = (player1.getHealth()>player2.getHealth()) ? player2:player1;
-        Player defender = (player2.getHealth()>player1.getHealth()) ? player1:player2;
+        // Decide initial attacker based on health
+        Player initialAttacker = (player1.getHealth()>player2.getHealth()) ? player2:player1;
+        Player initialDefender = (player1.getHealth()>player2.getHealth()) ? player1:player2;
+        // Continue fighting until one player is dead
         while(player1.isAlive() && player2.isAlive()){
-            attack(attacker,defender);
-            if(defender.isAlive()){
-                swapRole(attacker,defender);
-                attack(attacker,defender);
+            attack(initialAttacker,initialDefender);
+            if(initialDefender.isAlive()){
+                attack(initialDefender,initialAttacker);
             }
         }
+
+        // Print the winner after the fight ends
         if (player1.isAlive()) {
             System.out.println(player1.getName() + " wins!");
         } else {
