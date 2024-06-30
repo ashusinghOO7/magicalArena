@@ -1,4 +1,4 @@
-package org.example.player;
+package com.player;
 import java.lang.*;
 public class Player {
     private final String name;

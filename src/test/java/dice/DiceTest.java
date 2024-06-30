@@ -1,6 +1,6 @@
 package dice;
 
-import org.example.dice.Dice;
+import com.dice.Dice;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 public class DiceTest {

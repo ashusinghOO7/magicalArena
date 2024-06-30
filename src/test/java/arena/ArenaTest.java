@@ -1,7 +1,7 @@
 package arena;
 
-import org.example.arena.Arena;
-import org.example.player.Player;
+import com.arena.Arena;
+import com.player.Player;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

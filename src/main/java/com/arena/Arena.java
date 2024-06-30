@@ -1,8 +1,8 @@
-package org.example.arena;
+package com.arena;
 
 
-import org.example.dice.Dice;
-import org.example.player.Player;
+import com.dice.Dice;
+import com.player.Player;
 
 public class Arena {
     private Player player1;

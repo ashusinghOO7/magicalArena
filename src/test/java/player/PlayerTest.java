@@ -1,6 +1,6 @@
 package player;
 
-import org.example.player.Player;
+import com.player.Player;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

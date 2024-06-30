@@ -1,7 +1,7 @@
-package org.example;
+package com;
 
-import org.example.arena.Arena;
-import org.example.player.Player;
+import com.arena.Arena;
+import com.player.Player;
 
 import java.util.Scanner;
 

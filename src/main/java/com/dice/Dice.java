@@ -1,4 +1,4 @@
-package org.example.dice;
+package com.dice;
 import java.util.*;
 public class Dice {
     private static final int SIDES = 6;
