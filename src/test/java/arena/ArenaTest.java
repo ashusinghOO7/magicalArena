@@ -1,6 +1,5 @@
 package arena;
 
-import com.magicalarena.player.Player;
 import org.example.arena.Arena;
 import org.example.player.Player;
 import org.junit.jupiter.api.Test;
