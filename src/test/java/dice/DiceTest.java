@@ -4,6 +4,7 @@ import org.example.dice.Dice;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 public class DiceTest {
+    //Test to ensure dice always outputs in a valid range
     @Test
     public void testDice(){
         Dice dice = new Dice();
